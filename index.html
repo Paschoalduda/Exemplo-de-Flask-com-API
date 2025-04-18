@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo:Soma de Dados</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo: Soma de Dados</h1>
+        <button id="startRound">Iniciar Rodada</button>
+        <div id="gameSection" style="display: none;">
+            <input type="number" id="guessInput" placeholder="Digite seu palpite" min="2" max="12" disabled>
+            <button id="playGuess" disabled>Jogar</button>
+            <p id="message"></p>
+            <p id="attempts"></p>
+        </div>
+        <button id="resetGame">Reiniciar Jogo</button>
+        <div id="scoreboard" class="center">
+            <h2>Placar</h2>
+            <p>Rodadas Ganhas: <span id="wins">0</span></p>
+            <p>Rodadas Perdidas: <span id="losses">0</span></p>
+        </div>
+        <div id="history">
+            <h2>Histórico de Rodadas</h2>
+            <textarea id="historyLog" readonly></textarea>
+        </div>
+    </div>
+    <div class=".container2">
+        <img src="./img/plano2.avif" alt="foto de plano de fundo ">
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

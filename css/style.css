@@ -1,0 +1,80 @@
+body {
+    border: 1px solid black;
+    font-family: Arial, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /*background-image: url("../img/plano2.avif");*/
+    /*background-repeat: no-repeat;
+    background-position: center;*/
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+   
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #bd86df;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    resize: none;
+}
+
+#scoreboard, #history {
+    margin-top: 20px;
+   
+}
+
+ h1, h2 , p{
+    font-family: initial;
+ }
+
+ textarea{
+    background-color: #d6bbe7;
+ }
+ 
+div .container2{
+    width: 100%;
+   height: 400px;
+   background-image: url('../img/plano2.avif');
+   background-size: 100% 100%;
+   border: 1px solid black;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+  
+  img { 
+    width: 100%;
+    height: auto;
+    
+  }
