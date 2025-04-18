@@ -1,0 +1,6 @@
+body{
+    background-image: url('../static/img/imgnetflix.jpg')
+    background-sizs cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}

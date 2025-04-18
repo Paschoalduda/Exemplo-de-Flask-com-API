@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block titulo %}Cadastro{% endblock titulo%}
+
+{% block conteudo %}
+<style>
+    body {
+      background-image: url('caminho/para/sua/imagem.jpg');
+      background-size: cover; /* Faz a imagem cobrir toda a tela */
+      background-position: center; /* Centraliza a imagem */
+      background-repeat: no-repeat; /* Impede que a imagem se repita */
+    }
+  </style>
+  
+<div class="container mt-4"  text-danger>
+    <h1 class="text-center text-danger">Cadastrar-se</h1>
+    <hr class="my-4">
+    <form method="POST" action="{{ url_for('front_controller.cadastro') }}">
+        <div class="mb-3">
+            <label for="usuario" class="form-label text-danger">Usuário</label>
+            <input type="email" class="form-control border-danger" id="usuario" name="textUsuario" placeholder="email@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="senha" class="form-label text-danger">Senha</label>
+            <input type="password" class="form-control border-danger" id="senha" name="textSenha" required>
+        </div>
+        <div class="col-md-6">
+            <label for="photo" class="form-label danger">Foto do Contato</label>
+            <input type="file" id="photo" name="fileFoto" class="form-control" accept="image/*">
+        </div>
+         <br>
+        <button type="submit" class="btn btn-danger w-100">Cadastrar-se</button>
+    </form>
+</div>
+{% endblock conteudo %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block titulo %}series{% endblock titulo %}
+
+{% block conteudo %}
+<div class="container">
+    <h1 class="text-danger mb-4">Esse é o nosso Catálogo de Série</h1>
+    <h2>Gêneros</h2>
+
+    <form action="{{ url_for('front_controller.series') }}" method="POST" class=" text-white">
+        <div>
+            <input type="radio" name="tipoSerie" id="kids" value="kids">
+            <label for="kids">Kids</label>
+        </div>
+        <div>
+            <input type="radio" name="tipoSerie" id="comedia" value="comedy">
+            <label for="comedia">Comédia</label>
+        </div>
+        <div>
+            <input type="radio" name="tipoSerie" id="drama" value="drama">
+            <label for="drama">Drama</label>
+        </div>
+        
+        <div>
+            <input type="radio" name="tipoSerie" id="doc" value="Documentarios">
+            <label for="doc">Documentarios</label>
+        </div>
+        <div>
+            <input type="radio" name="tipoSerie" id="reality" value="Reality">
+            <label for="reality">Reality</label>
+        </div>
+        <div>
+            <input type="radio" name="tipoSerie" id="misterio" value="Misterio">
+            <label for="misterio">Misterio</label>
+        </div>
+
+        
+        <button type="submit" style="border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 10px auto;">
+            Filtrar Gêneros
+        </button>
+    </form>
+    
+    {% if series %}
+        <h2 class="mt-4 text-danger">{{opcao}}</h2>
+        <div class="container">
+            <div class="row">
+                {% for serie in series %}
+                <div class="col-md-4">
+                    <div class="card bg-dark mb-4" style="width: 100%;">
+                        <img src="https://image.tmdb.org/t/p/w500/{{ serie.poster_path }}" class="card-img-top" alt="Poster de {{ serie.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">{{ serie.title }}</h5>
+                            <br>
+                            <p class="card-text text-info">{{ serie.overview }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    {% endif %}
+</div>
+{% endblock conteudo %}

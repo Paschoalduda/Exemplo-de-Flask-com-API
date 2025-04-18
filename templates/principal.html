@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Principal{% endblock titulo %} 
+
+{% block conteudo %}
+    <div class="container-fluid" style="background-image: url('../static/img/principal.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center" style="height: 900px;">
+            <img src="{{ url_for('static', filename='img/principal.jpg') }}" alt="Imagem Principal" class="img-fluid" style="max-width: 3800px; height: auto;">
+        </div>
+    </div>
+{% endblock conteudo %}
